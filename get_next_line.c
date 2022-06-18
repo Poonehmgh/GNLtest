@@ -6,7 +6,7 @@
 /*   By: pmoghadd <pmoghadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 23:31:54 by pmoghadd          #+#    #+#             */
-/*   Updated: 2022/06/16 17:34:33 by pmoghadd         ###   ########.fr       */
+/*   Updated: 2022/06/18 12:58:38 by pmoghadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,10 +120,7 @@ char	*get_next_line(int fd)
 			return (0);
 		counter = counter + n;
 		if (n)
-		{
 			ft_strcat(buf2, buf);
-			ft_bzero(buf, BUFFER_SIZE + 1);
-		}
 	}
 	if ((n == 0 && !buf[0]) && !buf2[0])
 		return (0);
@@ -134,10 +131,16 @@ char	*get_next_line(int fd)
 // int main()
 // {
 // 	int	fd;
+	
 // 	fd = open("poone.txt", O_RDONLY);
+// 	// printf("\n 0 the function output: |%s|\n", get_next_line(fd));
+// 	// char c = 0;
+// 	// read(fd, &c, 1);
+// 	// printf("1 the function output: |%c|\n",c);
 // 	for (int i = 0; i < 8; i++)
 // 	{
 // 		printf("\n i: %d the function output: |%s|\n", i, get_next_line(fd));
 // 	}
+
 // 	close(fd);
 // }
